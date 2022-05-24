@@ -1,0 +1,17 @@
+# The credentials for the sql database
+mysql:
+  address: "172.17.0.2"
+  port: 3306
+  database: "test"
+  username: "root"
+  password: "03291ksoad1zaspodkfs"
+
+afk-threshold-seconds: 30
+
+addresses:
+  - '0xECDD2F733bD20E56865750eBcE33f17Da0bEE461' 
+  - '0x99654fd49C0E51b8029d2ba7DE5b99734aB7AFEC'
+
+wrld-reward:
+  reward-interval-minutes: 30
+  wrld-per-interval: 2

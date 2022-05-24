@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group 'org.amirion.nftworld'
+version '1.0-BETA'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly project(":common")
+    compileOnly ('org.web3j:core:5.0.0')
+}
+
+test {
+    useJUnitPlatform()
+}

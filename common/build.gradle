@@ -1,0 +1,16 @@
+plugins {
+    id 'java'
+}
+
+group 'org.amirion.nftworld'
+version '1.0-BETA'
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    implementation group: 'com.github.jnr', name: 'jffi', version: '1.3.9'
+    compileOnly ('org.web3j:core:5.0.0')
+}

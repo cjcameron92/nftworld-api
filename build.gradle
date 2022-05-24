@@ -1,0 +1,46 @@
+apply plugin: 'idea'
+
+ext {
+    log4Version = '2.9.1'
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath "gradle.plugin.com.github.johnrengelman:shadow:7.1.2"
+    }
+}
+
+apply plugin: "com.github.johnrengelman.shadow"
+
+allprojects {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+        maven {
+            url = uri("https://papermc.io/repo/repository/maven-public/")
+        }
+
+        maven {
+            url("https://repo.lucko.me/")
+        }
+    }
+}
+
+subprojects {
+    apply plugin: 'com.github.johnrengelman.shadow'
+    apply plugin: 'java'
+
+    group = "org.amirion.${rootProject.name}"
+
+    dependencies {
+        implementation('org.jetbrains:annotations:16.0.2')
+        compileOnly("io.papermc.paper:paper-api:1.18.2-R0.1-SNAPSHOT")
+    }
+
+}

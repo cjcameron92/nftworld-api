@@ -1,0 +1,9 @@
+ethereum-rpc: ''
+polygon-rpc: ''
+
+private-server-key: ''
+
+contracts:
+  polygon-player: ''
+  polygon-wrld: ''
+  ethereum-wrld: ''
